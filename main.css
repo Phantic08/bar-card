@@ -1,0 +1,198 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+        
+        body {
+            background-color: #f8f5f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+            url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            font-size: 3.5rem;
+            color: #c0a080;
+            margin-bottom: 10px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: #5a3921;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        
+        .event-info {
+            background: #5a3921;
+            color: #f8f5f0;
+            padding: 12px;
+            margin: 20px auto;
+            max-width: 500px;
+            border-radius: 2px;
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+        
+        .menu-category {
+            margin-bottom: 50px;
+        }
+        
+        .category-title {
+            font-size: 1.8rem;
+            color: #5a3921;
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #c0a080;
+            font-weight: normal;
+        }
+        
+        .cocktails-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .cocktail-card {
+            background: white;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .cocktail-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .cocktail-image {
+            height: 250px;
+            overflow: hidden;
+            background: white;
+        }
+        
+        .cocktail-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: scale-down;
+            transition: transform 0.5s ease;
+        }
+        
+        .cocktail-card:hover .cocktail-image img {
+            transform: scale(1.03);
+        }
+        
+        .cocktail-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .cocktail-header {
+            margin-bottom: 15px;
+        }
+        
+        .cocktail-name {
+            font-size: 1.6rem;
+            color: #5a3921;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .ingredients-title {
+            font-size: 1.1rem;
+            color: #7f6b58;
+            margin-bottom: 10px;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        .ingredients-list {
+            list-style-type: none;
+            margin-bottom: 15px;
+            padding: 0 15px;
+        }
+        
+        .ingredients-list li {
+            position: relative;
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+            padding-left: 20px;
+            line-height: 1.5;
+        }
+        
+        .ingredients-list li:before {
+            content: "•";
+            color: #c0a080;
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+            top: -1px;
+        }
+        
+        .signature {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 20px;
+        }
+        
+        .bartender {
+            font-size: 1.2rem;
+            color: #5a3921;
+            font-weight: bold;
+            margin-top: 15px;
+            font-style: italic;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            color: #7f6b58;
+            font-size: 0.9rem;
+            border-top: 1px solid #e0d0c0;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .cocktails-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .category-title {
+                font-size: 1.6rem;
+            }
+            
+            .cocktail-name {
+                font-size: 1.4rem;
+            }
+        }
